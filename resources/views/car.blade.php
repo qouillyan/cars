@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Cars</title>
+        <title>{{ $car->title }} - {{ $car->producer }}</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
@@ -21,16 +21,9 @@
         </style>
     </head>
     <body class="antialiased">
-        <h1>Cars</h1>
+        <h1>Car</h1>
 
-        <ul>
-            @foreach ($cars as $car)
-                <li>
-                    <a href="{{ route('single-car', ['id' => $car->id]) }}">
-                        {{ $car->producer }}
-                    </a>
-                </li>
-            @endforeach
-        </ul>
+        <p>{{ $car->producer }}</p>
+        
     </body>
 </html>
